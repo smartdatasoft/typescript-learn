@@ -1,23 +1,10 @@
-
-let a: (string | number)[] = [];
-
-
-a.push('arif');
-
-
-
-let c: {
-    name: string,
-    age: number,
-    adult: boolean
-
+let b: {
+    name: any,
+    age: any
 };
-c = {
-    name: 'Arif',
-    age: 22,
-    adult: 'true'
+
+
+b = {
+    name: "Bangladesh",
+    age: 45
 }
-
-let d: object;
-
-d = [1, 2, 3];
