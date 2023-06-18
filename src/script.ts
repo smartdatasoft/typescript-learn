@@ -14,8 +14,16 @@ console.log(playerName); */
 
 console.log(multiply(4, 4)); */
 
-let mixed = ['apple', 3, true, 'orange', {}];
+/* let mixed = ['apple', 3, true, 'orange', {}];
 
 mixed.push({
     name: "Sakib"
-});
+}); */
+
+let person = {
+    name: 'Musfiq',
+    age: 35,
+    isCaptain: true
+}
+
+person.country = "Bangladesh";
