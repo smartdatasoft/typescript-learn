@@ -1,29 +1,23 @@
-/* let playerName;
-console.log(playerName);
 
-playerName = "Musfiqur";
-
-playerName = 34;
+let a: (string | number)[] = [];
 
 
-console.log(playerName); */
+a.push('arif');
 
-/* function multiply(a: number, b: number) {
-    return a * b;
+
+
+let c: {
+    name: string,
+    age: number,
+    adult: boolean
+
+};
+c = {
+    name: 'Arif',
+    age: 22,
+    adult: 'true'
 }
 
-console.log(multiply(4, 4)); */
+let d: object;
 
-/* let mixed = ['apple', 3, true, 'orange', {}];
-
-mixed.push({
-    name: "Sakib"
-}); */
-
-let person = {
-    name: 'Musfiq',
-    age: 35,
-    isCaptain: true
-}
-
-person.country = "Bangladesh";
+d = [1, 2, 3];
