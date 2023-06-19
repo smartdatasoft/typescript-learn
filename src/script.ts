@@ -1,11 +1,26 @@
+/* let myFunc: (x: string, y: string) => void;
 
+let add: (x: number, y: number) => number;
 
-const myFunc = (a: number, b: number, c: string = 'true'): string => {
-    //console.log(`Hello ${a} ${b}`);
+add = (a: number, b: number) => {
 
+    console.log(a + b);
     return a + b;
-};
+} */
 
 
-myFunc(3, 4, false);
+let userDetails: (id: number | string, userInfo: {
+
+    name: string,
+    age: number,
+}) => void;
+
+userDetails = (
+    id: number | string, userInfo: {
+        name: string,
+        age: number
+    }) => {
+
+
+}
 
