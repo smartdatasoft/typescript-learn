@@ -1,26 +1,26 @@
-/* let myFunc: (x: string, y: string) => void;
+class Player {
+    name: string;
+    age: number;
+    country: string;
 
-let add: (x: number, y: number) => number;
+    constructor(n: string, a: number, c: string) {
 
-add = (a: number, b: number) => {
-
-    console.log(a + b);
-    return a + b;
-} */
-
-
-let userDetails: (id: number | string, userInfo: {
-
-    name: string,
-    age: number,
-}) => void;
-
-userDetails = (
-    id: number | string, userInfo: {
-        name: string,
-        age: number
-    }) => {
-
-
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
+    }
 }
 
+
+const musfiq = new Player('Musfiq', 40, 'Bangladesh');
+const sakib = new Player('Sakib', 38, 'Bangladesh');
+
+console.log(musfiq.age);
+
+const players: Player[] = [];
+
+players.push(musfiq);
+players.push(sakib);
