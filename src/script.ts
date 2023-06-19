@@ -1,10 +1,11 @@
-let b: {
-    name: any,
-    age: any
+
+
+const myFunc = (a: number, b: number, c: string = 'true'): string => {
+    //console.log(`Hello ${a} ${b}`);
+
+    return a + b;
 };
 
 
-b = {
-    name: "Bangladesh",
-    age: 45
-}
+myFunc(3, 4, false);
+
