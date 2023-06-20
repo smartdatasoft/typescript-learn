@@ -1,18 +1,9 @@
-"use strict";
-//ENUMS
-var RType;
-(function (RType) {
-    RType[RType["SUCCESS"] = 0] = "SUCCESS";
-    RType[RType["FAILURE"] = 1] = "FAILURE";
-    RType[RType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
-    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
-})(RType || (RType = {}));
-const response1 = {
-    status: 200,
-    type: RType.FORBIDDEN,
-    data: {
-        name: 'Test',
-        something: 300
-    }
-};
-console.log(response1);
+import BankAccount from "./classes/bank-account.class";
+// Creating an instance of BankAccount
+const myAccount = new BankAccount("1234567890", 1000, "John Doe");
+// Using the account
+console.log(`Account owner: ${myAccount.ownerName}`);
+console.log(`Account balance: ${myAccount.balance}`);
+myAccount.deposit(500);
+myAccount.withdraw(200);
+myAccount.withdraw(2000);
