@@ -1,8 +1,18 @@
-const musfiq = new Player('Musfiq', 40, 'Bangladesh');
-const sakib = new Player('Sakib', 38, 'Bangladesh');
-console.log(sakib.age);
-console.log(sakib.country);
-const players = [];
-players.push(musfiq);
-players.push(sakib);
-export {};
+"use strict";
+//ENUMS
+var RType;
+(function (RType) {
+    RType[RType["SUCCESS"] = 0] = "SUCCESS";
+    RType[RType["FAILURE"] = 1] = "FAILURE";
+    RType[RType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
+    RType[RType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(RType || (RType = {}));
+const response1 = {
+    status: 200,
+    type: RType.FORBIDDEN,
+    data: {
+        name: 'Test',
+        something: 300
+    }
+};
+console.log(response1);
