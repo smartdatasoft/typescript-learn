@@ -1,13 +1,14 @@
-import fetchUserData from "./services/userService.js";
-import User from "./interfaces/User.js";
+import Post from "./interfaces/Post.js";
+import transformPost from "./utils/transformPost.js";
+import Transformer from "./interfaces/Transformer.js";
 
-async function displayUser(userId: number): Promise<void> {
-    try {
-        const user: User = await fetchUserData(userId);
-        console.log(user);
-    } catch (error) {
-        console.error(error);
-    }
-}
+const originalPost: Post = {
+    id: 1,
+    title: "Hello TypeScript",
+    body: "TypeScript is awesome!",
+};
 
-displayUser(1);
+const postTransform: Transformer = transformPost(originalPost);
+
+
+console.log(postTransform);
