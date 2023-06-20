@@ -1,30 +1,38 @@
-import { Player } from "./classes/Player.js";
-import { IsPlayer } from "./interfaces/IsPlayer.js";
-
-const musfiq = new Player('Musfiq', 40, 'Bangladesh');
-let sakib: IsPlayer;
-
-sakib = new Player('Sakib', 40, 'Bangladesh');
-
-
-const players: IsPlayer[] = [];
-
-players.push(musfiq);
-players.push(sakib);
-
-
-/* interface RectangleOptions {
-    width: number;
-    length: number;
+/* const addId = <T extends {
+    name: string;
+    age: number;
 }
-function drawRectangle(options: RectangleOptions) {
-    let width = options.width;
-    let length = options.length;
-}
+>(obj: T) => {
 
-let threeDoptions = {
-    width: 30,
-    length: 20,
-    height: 10,
+    let id = Math.floor(Math.random() * 100);
+    return { ...obj, id };
 };
-drawRectangle(threeDoptions); */
+
+let user = addId({
+    name: "Musfiq",
+    age: 30,
+    country: "Bangladehs"
+});
+
+ß
+//let user = 'Sakib';
+
+addId(user); */
+
+
+interface APIResponse<T> {
+
+    status: number;
+    type: string,
+    data: T
+}
+
+const response1: APIResponse<object> = {
+    status: 200,
+    type: 'good',
+    data: {
+        name: 'Test',
+        something: 300
+    }
+}
+
