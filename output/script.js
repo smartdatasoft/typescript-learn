@@ -1,4 +1,4 @@
-import BankAccount from "./classes/bank-account.class";
+import BankAccount from "./classes/bank-account.class.js";
 // Creating an instance of BankAccount
 const myAccount = new BankAccount("1234567890", 1000, "John Doe");
 // Using the account
