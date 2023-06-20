@@ -1,6 +1,6 @@
 
-import Account from "./interfaces/account.interface.js";
-import BankAccount from "./classes/bank-account.class.js";
+import Account from "./interfaces/account.interface";
+import BankAccount from "./classes/bank-account.class";
 
 
 // Creating an instance of BankAccount
