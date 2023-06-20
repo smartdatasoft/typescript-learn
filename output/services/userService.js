@@ -7,16 +7,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import fetchUserData from "./services/userService.js";
-function displayUser(userId) {
+function fetchUserData(userId) {
     return __awaiter(this, void 0, void 0, function* () {
-        try {
-            const user = yield fetchUserData(userId);
-            console.log(user);
+        const response = yield fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch user data");
         }
-        catch (error) {
-            console.error(error);
-        }
+        const userData = yield response.json();
+        return userData;
     });
 }
-displayUser(1);
+export default fetchUserData;

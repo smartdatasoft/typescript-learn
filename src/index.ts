@@ -1,10 +1,13 @@
+import fetchUserData from "./services/userService.js";
 import User from "./interfaces/User.js";
-import validateUser from "./utils/validateUser.js";
 
-const newUser: User = {
-    username: "john_doe",
-    password: "password123",
-    email: "johnexample.com",
-};
+async function displayUser(userId: number): Promise<void> {
+    try {
+        const user: User = await fetchUserData(userId);
+        console.log(user);
+    } catch (error) {
+        console.error(error);
+    }
+}
 
-const isValidUser: boolean = validateUser(newUser);
+displayUser(1);
